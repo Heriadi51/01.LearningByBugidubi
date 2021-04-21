@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    tools:context=".GenderActivity">
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:alpha="0.2"
+        android:background="@drawable/ic_boy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:alpha="0.2"
+        android:background="@drawable/ic_girl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_boy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="left"
+            android:text="Laki-laki \n(Boy)"
+            android:textColor="#0E0A2A"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_boy"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:src="@drawable/ic_boy" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_girl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardview_boy"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardview_boy"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_boy">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="left"
+            android:text="Perempuan \n(Girl)"
+            android:textColor="#0E0A2A"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_girl"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:src="@drawable/ic_girl" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
